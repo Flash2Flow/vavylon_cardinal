@@ -10,8 +10,8 @@ import (
 )
 
 type ResponseTest struct {
-	Status		string
-	Text string
+	Status string
+	Code string
 }
 
 
@@ -61,7 +61,7 @@ func api(w http.ResponseWriter, r *http.Request) {
 				fmt.Fprintf(w, OtherErrors[0])
 			}else{
 				//send req cardinal
-        responsetest := ResponseTest{"Status: OK",  "Code 1 TRUE"}
+        responsetest := ResponseTest{"OK",  "1 TRUE"}
 
 	      js, err := json.Marshal(responsetest)
 	      if err != nil {
