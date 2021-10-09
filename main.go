@@ -34,13 +34,11 @@ func api(w http.ResponseWriter, r *http.Request) {
 
 	TitleByte := query.Get("title")
 	TokenByte := query.Get("token")
-	EmailByte := query.Get("email")
-	UserKeyByte := query.Get("key")
+
 
 	title := string(TitleByte[:])
 	token := string(TokenByte[:])
-	email := string(EmailByte[:])
-	userkey := string(UserKeyByte[:])
+
 
 	if title == "" {
 		log.Println(ErrUrl[0])
